@@ -46,7 +46,9 @@
               :text "/text/TextGetCombinedData"}
    :image_extract {:url "/url/URLGetImage"}
    :image_tag {:url   "/url/URLGetRankedImageKeywords"
-               :image "/image/ImageGetRankedImageKeywords"}})
+               :image "/image/ImageGetRankedImageKeywords"}
+   :pub_date {:url "/url/URLGetPubDate"
+              :html "/html/HTMLGetPubDate"}})
 
 (defonce base-url "http://access.alchemyapi.com/calls")
 
@@ -110,3 +112,5 @@
 (defendpoint image_extract "Extract image from a URL.")
 
 (defendpoint image_tag "Tag image from a URL or raw image data.")
+
+(defendpoint pub_date "Extract publication date from news articles and blog posts.")
